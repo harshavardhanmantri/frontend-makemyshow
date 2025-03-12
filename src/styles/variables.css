@@ -1,0 +1,53 @@
+:root {
+    /* Color scheme */
+    --primary-color: #4682b4; /* Steel Blue */
+    --primary-light: #6ca2d4;
+    --primary-dark: #2c5784;
+    
+    --secondary-color: #f39c12; /* Orange */
+    --secondary-light: #f5b041;
+    --secondary-dark: #d68910;
+    
+    --success-color: #2ecc71; /* Green */
+    --success-light: #58d68d;
+    --success-dark: #27ae60;
+    
+    --danger-color: #e74c3c; /* Red */
+    --danger-light: #ec7063;
+    --danger-dark: #c0392b;
+    
+    --warning-color: #f1c40f; /* Yellow */
+    --warning-light: #f4d03f;
+    --warning-dark: #d4ac0d;
+    
+    --info-color: #3498db; /* Blue */
+    --info-light: #5dade2;
+    --info-dark: #2980b9;
+    
+    /* Neutral colors */
+    --bg-color: #f8f9fa;
+    --text-color: #333333;
+    --text-secondary: #6c757d;
+    --heading-color: #212529;
+    --border-color: #dee2e6;
+    
+    /* Spacing */
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+    
+    /* Border radius */
+    --border-radius-sm: 4px;
+    --border-radius-md: 8px;
+    --border-radius-lg: 12px;
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+    
+    /* Transitions */
+    --transition-speed: 0.3s;
+  } 

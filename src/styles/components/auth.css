@@ -1,0 +1,197 @@
+/* Auth Pages (Login/Register) */
+.auth-page {
+    background-color: var(--bg-color);
+    min-height: calc(100vh - 200px);
+    padding: var(--spacing-xl) 0;
+  }
+  
+  .auth-container {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .auth-card {
+    background-color: white;
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-md);
+    padding: var(--spacing-xl);
+  }
+  
+  .register-card {
+    max-width: 600px;
+  }
+  
+  .auth-header {
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+  }
+  
+  .auth-header h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    color: var(--primary-color);
+  }
+  
+  .auth-header p {
+    color: var(--text-secondary);
+  }
+  
+  .auth-form {
+    margin-bottom: var(--spacing-lg);
+  }
+  
+  .auth-form .form-group {
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .auth-form .form-label {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-sm);
+    font-weight: 500;
+  }
+  
+  .auth-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-lg);
+  }
+  
+  .remember-me {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+  }
+  
+  .remember-me input {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .forgot-password {
+    color: var(--primary-color);
+    font-size: 0.875rem;
+  }
+  
+  .forgot-password:hover {
+    text-decoration: underline;
+  }
+  
+  .auth-btn {
+    width: 100%;
+    padding: var(--spacing-md);
+    font-weight: 500;
+  }
+  
+  .auth-footer {
+    text-align: center;
+    border-top: 1px solid var(--border-color);
+    padding-top: var(--spacing-lg);
+  }
+  
+  .auth-footer a {
+    font-weight: 500;
+  }
+  
+  .auth-error, .auth-success {
+    margin-bottom: var(--spacing-lg);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius-sm);
+  }
+  
+  .auth-error {
+    background-color: rgba(231, 76, 60, 0.1);
+    color: var(--danger-color);
+    border-left: 4px solid var(--danger-color);
+  }
+  
+  .auth-success {
+    background-color: rgba(46, 204, 113, 0.1);
+    color: var(--success-color);
+    border-left: 4px solid var(--success-color);
+  }
+  
+  /* Account Type Selector */
+  .account-type-selector {
+    display: flex;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  .account-type {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-md);
+    border: 2px solid var(--border-color);
+    border-radius: var(--border-radius-md);
+    cursor: pointer;
+    transition: all var(--transition-speed) ease;
+  }
+  
+  .account-type:hover {
+    border-color: var(--primary-light);
+  }
+  
+  .account-type.selected {
+    border-color: var(--primary-color);
+    background-color: rgba(70, 130, 180, 0.1);
+  }
+  
+  .account-type-radio {
+    position: absolute;
+    opacity: 0;
+  }
+  
+  .account-type svg {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+  }
+  
+  .account-type span {
+    font-weight: 500;
+  }
+  
+  /* Terms Checkbox */
+  .terms-checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-sm);
+  }
+  
+  .terms-checkbox input {
+    margin-top: 3px;
+    width: 16px;
+    height: 16px;
+  }
+  
+  .terms-checkbox label {
+    font-size: 0.875rem;
+    line-height: 1.4;
+  }
+  
+  .terms-checkbox a {
+    text-decoration: underline;
+  }
+  
+  /* Responsive */
+  @media (max-width: 576px) {
+    .auth-container {
+      padding: 0 var(--spacing-md);
+    }
+    
+    .auth-card {
+      padding: var(--spacing-lg);
+    }
+    
+    .account-type-selector {
+      flex-direction: column;
+    }
+  }

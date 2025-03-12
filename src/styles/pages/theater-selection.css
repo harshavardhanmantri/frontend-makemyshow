@@ -1,0 +1,218 @@
+/* Theater Selection Page */
+.theater-selection-page {
+    padding: var(--spacing-lg) 0;
+    min-height: calc(100vh - 200px);
+  }
+  
+  /* Movie Info Bar */
+  .movie-info-bar {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+    padding-bottom: var(--spacing-lg);
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .back-button {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    font-weight: 500;
+    cursor: pointer;
+    padding: var(--spacing-sm);
+    border-radius: var(--border-radius-sm);
+    transition: background-color var(--transition-speed) ease;
+  }
+  
+  .back-button:hover {
+    background-color: rgba(70, 130, 180, 0.1);
+  }
+  
+  .movie-brief h1 {
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  .movie-brief-details {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+  }
+  
+  /* Selection Filters */
+  .selection-filters {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+    padding: var(--spacing-lg);
+    background-color: white;
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-sm);
+  }
+  
+  .date-selector, .city-selector {
+    flex: 1;
+  }
+  
+  .selector-label {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+    font-weight: 500;
+    color: var(--text-secondary);
+  }
+  
+  .date-pills {
+    display: flex;
+    gap: var(--spacing-sm);
+    overflow-x: auto;
+    padding-bottom: var(--spacing-sm);
+  }
+  
+  .date-pill {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--spacing-sm) var(--spacing-md);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-md);
+    cursor: pointer;
+    background: none;
+    transition: all var(--transition-speed) ease;
+  }
+  
+  .date-pill:hover {
+    border-color: var(--primary-color);
+  }
+  
+  .date-pill.active {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+  }
+  
+  .day {
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+  
+  .date {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    margin: var(--spacing-xs) 0;
+  }
+  
+  .month {
+    font-size: 0.75rem;
+  }
+  
+  .city-selector select {
+    width: 100%;
+    padding: var(--spacing-md);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-md);
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%234682b4' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1rem;
+    cursor: pointer;
+  }
+  
+  /* Theaters List */
+  .theaters-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+  }
+  
+  .theater-card {
+    background-color: white;
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-md);
+    padding: var(--spacing-lg);
+  }
+  
+  .theater-info {
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .theater-info h3 {
+    font-size: 1.25rem;
+    margin-bottom: var(--spacing-xs);
+  }
+  
+  .theater-address {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+  }
+  
+  /* Loading and Error States */
+  .loading-container {
+    display: flex;
+    justify-content: center;
+    padding: var(--spacing-xl) 0;
+  }
+  
+  .error-message {
+    background-color: rgba(231, 76, 60, 0.1);
+    color: var(--danger-color);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius-md);
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+  }
+  
+  .no-shows {
+    text-align: center;
+    padding: var(--spacing-xl);
+    background-color: white;
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-sm);
+  }
+  
+  .no-shows h3 {
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .no-shows p {
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .selection-filters {
+      flex-direction: column;
+    }
+    
+    .date-pills {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      padding-bottom: var(--spacing-sm);
+      -webkit-overflow-scrolling: touch;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .movie-info-bar {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: var(--spacing-md);
+    }
+  }

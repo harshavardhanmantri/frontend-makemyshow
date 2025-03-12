@@ -1,0 +1,383 @@
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/assets/images/cinema-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 5rem 0;
+    margin-bottom: var(--spacing-xl);
+  }
+  
+  .hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: var(--spacing-md);
+    color: white;
+  }
+  
+  .hero-content p {
+    font-size: 1.25rem;
+    margin-bottom: var(--spacing-xl);
+    color: rgba(255, 255, 255, 0.8);
+  }
+  
+  .movie-search {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius-md);
+  }
+  
+  /* Movie Filter */
+  .movie-filter {
+    width: 100%;
+  }
+  
+  .filter-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
+  
+  .search-box {
+    display: flex;
+    position: relative;
+  }
+  
+  .search-box input {
+    flex: 1;
+    padding: var(--spacing-md);
+    padding-right: 3rem;
+    border: none;
+    border-radius: var(--border-radius-md);
+    font-size: 1rem;
+  }
+  
+  .search-btn {
+    background: none;
+    border: none;
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: var(--primary-color);
+    font-size: 1.25rem;
+  }
+  
+  .filter-selects {
+    display: flex;
+    gap: var(--spacing-md);
+  }
+  
+  .filter-selects select {
+    flex: 1;
+    padding: var(--spacing-md);
+    border: none;
+    border-radius: var(--border-radius-md);
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%234682b4' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .filter-actions {
+    display: flex;
+    gap: var(--spacing-md);
+  }
+  
+  .clear-btn, .search-submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-md) var(--spacing-lg);
+  }
+  
+  .clear-btn {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+  }
+  
+  .clear-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  /* Movie Sections */
+  .movie-section {
+    margin-bottom: var(--spacing-xl);
+  }
+  
+  .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-lg);
+  }
+  
+  .section-header h2 {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    margin-bottom: 0;
+  }
+  
+  .view-all {
+    color: var(--primary-color);
+    font-weight: 500;
+  }
+  
+  .view-all:hover {
+    text-decoration: underline;
+  }
+  
+  /* Movie Card */
+  .movie-card {
+    margin: var(--spacing-sm);
+    border-radius: var(--border-radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    background-color: white;
+    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+  }
+  
+  .movie-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+  }
+  
+  .movie-poster {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+  }
+  
+  .movie-poster img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-speed) ease;
+  }
+  
+  .movie-card:hover .movie-poster img {
+    transform: scale(1.05);
+  }
+  
+  .movie-rating {
+    position: absolute;
+    top: var(--spacing-sm);
+    right: var(--spacing-sm);
+    background-color: var(--primary-color);
+    color: white;
+    padding: 2px 8px;
+    border-radius: var(--border-radius-sm);
+    font-weight: bold;
+  }
+  
+  .movie-info {
+    padding: var(--spacing-md);
+  }
+  
+  .movie-title {
+    font-size: 1.1rem;
+    margin-bottom: var(--spacing-sm);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .movie-meta {
+    display: flex;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-sm);
+    font-size: 0.875rem;
+  }
+  
+  .movie-genre, .movie-language {
+    padding: 2px 8px;
+    background-color: var(--bg-color);
+    border-radius: var(--border-radius-sm);
+  }
+  
+  .movie-details {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--spacing-md);
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+  }
+  
+  .movie-detail {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+  }
+  
+  .book-btn {
+    width: 100%;
+  }
+  
+  /* Movie Slider */
+  .movie-slider {
+    position: relative;
+  }
+  
+  .movie-slide {
+    padding: 0 var(--spacing-sm);
+  }
+  
+  /* Override slick slider styles */
+  .slick-prev,
+  .slick-next {
+    z-index: 10;
+    width: 40px;
+    height: 40px;
+  }
+  
+  .slick-prev {
+    left: -10px;
+  }
+  
+  .slick-next {
+    right: -10px;
+  }
+  
+  .slick-prev:before,
+  .slick-next:before {
+    font-size: 40px;
+    color: var(--primary-color);
+  }
+  
+  .slick-dots {
+    bottom: -40px;
+  }
+  
+  .slick-dots li button:before {
+    font-size: 12px;
+    color: var(--primary-color);
+  }
+  
+  /* Error and empty states */
+  .error-message {
+    text-align: center;
+    padding: var(--spacing-xl);
+    background-color: var(--danger-light);
+    color: var(--danger-dark);
+    border-radius: var(--border-radius-md);
+    margin-bottom: var(--spacing-lg);
+  }
+  
+  .no-movies {
+    text-align: center;
+    padding: var(--spacing-xl);
+    background-color: var(--bg-color);
+    border-radius: var(--border-radius-md);
+    color: var(--text-secondary);
+  }
+  
+  /* Cities Section */
+  .cities-section {
+    margin-bottom: var(--spacing-xl);
+  }
+  
+  .cities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: var(--spacing-md);
+  }
+  
+  .city-card {
+    background-color: white;
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-sm);
+    text-align: center;
+    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+  }
+  
+  .city-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+    background-color: var(--primary-light);
+    color: white;
+  }
+  
+  .city-name {
+    font-weight: 500;
+  }
+  
+  /* Promotions Section */
+  .promotions-section {
+    margin-bottom: var(--spacing-xl);
+  }
+  
+  .promotion-card {
+    display: flex;
+    background: linear-gradient(135deg, var(--primary-light), var(--primary-dark));
+    color: white;
+    border-radius: var(--border-radius-md);
+    overflow: hidden;
+  }
+  
+  .promotion-content {
+    flex: 1;
+    padding: var(--spacing-xl);
+  }
+  
+  .promotion-content h3 {
+    color: white;
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .promotion-content p {
+    margin-bottom: var(--spacing-lg);
+  }
+  
+  .promotion-image {
+    flex: 1;
+    background-image: url('/assets/images/promotion.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 992px) {
+    .promotion-card {
+      flex-direction: column;
+    }
+    
+    .promotion-image {
+      height: 200px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .hero-content h1 {
+      font-size: 2.5rem;
+    }
+    
+    .filter-selects {
+      flex-direction: column;
+    }
+    
+    .filter-actions {
+      flex-direction: column;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .hero-content h1 {
+      font-size: 2rem;
+    }
+    
+    .cities-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
