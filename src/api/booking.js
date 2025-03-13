@@ -39,6 +39,7 @@ const getBookingById = async (id) => {
 // Cancel a booking
 const cancelBooking = async (id) => {
   try {
+    console.log("inside api")
     const response = await api.post(`/customer/bookings/${id}/cancel`);
     return response.data;
   } catch (error) {

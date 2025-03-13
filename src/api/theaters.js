@@ -29,12 +29,14 @@ const getAllCities = async () => {
 // Get shows for a movie on a specific date
 const getShowsForMovie = async (movieId, date, city = null) => {
   try {
+    console.log(movieId,date,city);
     let url = `/public/search/shows?movieId=${movieId}&date=${date}`;
     if (city) {
       url += `&city=${encodeURIComponent(city)}`;
     }
     
     const response = await api.get(url);
+    console.log(response.data);
     return response.data;
   } catch (error) {
     throw error.response?.data || {
@@ -111,6 +113,7 @@ const deleteTheater = async (id) => {
 const getScreensByTheater = async (theaterId) => {
   try {
     const response = await api.get(`/theater/screens/theater/${theaterId}`);
+    console.log("hi")
     return response.data;
   } catch (error) {
     throw error.response?.data || {
@@ -184,7 +187,9 @@ const getShowsByTheaterAndDate = async (theaterId, date) => {
 // Get show details by ID
 const getShowById = async (id) => {
   try {
+    console.log(id)
     const response = await api.get(`/theater/shows/${id}`);
+    console.log(re)
     return response.data;
   } catch (error) {
     throw error.response?.data || {
@@ -196,6 +201,7 @@ const getShowById = async (id) => {
 // Add a new show
 const addShow = async (showData) => {
   try {
+    console.log(showData);
     const response = await api.post('/theater/shows', showData);
     return response.data;
   } catch (error) {

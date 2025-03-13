@@ -10,7 +10,7 @@ const Header = () => {
 
   const handleLogout = () => {
     logout();
-    navigate('/');
+    navigate('/login');
   };
 
   return (
@@ -19,7 +19,7 @@ const Header = () => {
         <div className="header-content">
           <div className="logo">
             <Link to="/">
-              <h1>BookShow</h1>
+              <h1>Make My Show</h1>
             </Link>
           </div>
           

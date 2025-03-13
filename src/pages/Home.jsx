@@ -4,7 +4,7 @@ import { FaFilm, FaCalendarAlt, FaMapMarkerAlt } from 'react-icons/fa';
 import MovieSlider from '../components/movies/MovieSlider.jsx';
 import MovieFilter from '../components/movies/MovieFilter.jsx';
 import LoadingSpinner from '../components/common/LoadingSpinner.jsx';
-import { getNowShowingMovies, getUpcomingMovies, searchMovies } from '../api/movies.js';
+import { getAllMovies, getNowShowingMovies, getUpcomingMovies, searchMovies } from '../api/movies.js';
 import { getAllCities } from '../api/theaters.js';
 
 const Home = () => {
@@ -33,8 +33,8 @@ const Home = () => {
         setUpcomingMovies(upcoming);
         
         // Fetch cities
-        const citiesData = await getAllCities();
-        setCities(citiesData);
+        // const citiesData = await getAllCities();
+        // setCities(citiesData);
         
         setLoading(false);
       } catch (err) {

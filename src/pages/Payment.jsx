@@ -187,12 +187,12 @@ const Payment = () => {
               <h3>Order Summary</h3>
               
               <div className="movie-info">
-                <img 
+                {/* <img 
                   src={selectedMovie.posterUrl || '/assets/images/placeholder.jpg'} 
                   alt={selectedMovie.title} 
                   className="movie-thumbnail"
                 />
-                
+                 */}
                 <div className="movie-details">
                   <h4>{selectedMovie.title}</h4>
                   <p>{selectedMovie.language} • {selectedMovie.genre}</p>

@@ -3,7 +3,9 @@ import api from './axiosConfig.js';
 // Process payment for a booking
 const processPayment = async (paymentData) => {
   try {
+    console.log(paymentData);
     const response = await api.post('/customer/payments/process', paymentData);
+    console.log(response);
     return response.data;
   } catch (error) {
     throw error.response?.data || {
